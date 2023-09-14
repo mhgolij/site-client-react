@@ -1,0 +1,7 @@
+@font-face {
+    font-family:Vazirmatn ;
+    src: url(../fonts/webfonts/Vazirmatn-Regular.woff2);
+}
+body {
+    font-family: Vazirmatn, sans-serif;
+}
