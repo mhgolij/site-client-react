@@ -74,7 +74,7 @@ const MainPage = () => {
           </h2>
           <div className="flex justify-center flex-wrap gap-2">
             {bestResturant.map((best) => (
-              <BestResturant post={best} />
+              <BestResturant key={`best_${best.id}`} post={best} />
             ))}
           </div>
         </div>

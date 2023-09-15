@@ -5,4 +5,11 @@
 body {
     font-family: Vazirmatn, sans-serif;
     background-color: #fbf8f6;
+    
+}
+.App{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
 }

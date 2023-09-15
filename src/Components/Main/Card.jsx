@@ -11,7 +11,7 @@ const Card = ({post})=>{
   </div>
   <div className="p-6">
     <h3 className="text-center underline mb-4">
-        <Link to={`post/${post.slug}`}>{post.title}</Link>
+        <Link to={`/post/${post.slug}`}>{post.title}</Link>
     </h3>
     <p className="text-center mb-3 text-lg font-extrabold">
         {post.mid_title}
