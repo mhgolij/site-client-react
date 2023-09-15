@@ -10,7 +10,7 @@ const MainBanner = () => {
         <Loading />
       ) : (
         sliders.map((slider) => (
-          <div
+          <div key={`main-${slider.id}`}
             className="bg-cover bg-center bg-fixed"
             style={{
               backgroundImage: `url(${slider.url})`,
