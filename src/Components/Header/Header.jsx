@@ -12,7 +12,7 @@ const Header = () => {
         </Link>
         <div
           id="mega-menu-full"
-          className="items-center justify-between font-medium hidden w-full md:flex md:w-auto md:order-1"
+          className="items-center z-10 justify-between font-medium hidden w-full md:flex md:w-auto md:order-1"
         >
          <HeaderMenu />
         </div>
