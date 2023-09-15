@@ -1,11 +1,13 @@
-import MainCarousel from "../Carousel/MainCarousel"
-import { register } from 'swiper/element/bundle';
+import MainBanner from "./MainBanner";
 // register Swiper custom elements
 const MainPage = () => {
-    register();
     return <div>
         <div>
-        <MainCarousel />
+        <MainBanner />
+        </div>
+        <div className="flex mt-2">
+            <div className="basis-9/12">asd</div>
+            <div className="basis-3/12">sadwq</div>
         </div>
     </div>
 }

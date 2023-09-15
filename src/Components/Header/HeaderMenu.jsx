@@ -19,11 +19,11 @@ const HeaderMenu = ()=>{
         url,
     })
     return (
-        <ul className="flex gap-3 flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <ul className="flex gap-3 flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white">
         <li>
           <button onClick={hideCat}
             id="mega-menu-full-dropdown-button"
-            className="flex items-center justify-between w-full py-2 pl-3 pr-4  text-gray-900 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+            className="flex items-center justify-between w-full py-2 pl-3 pr-4  text-gray-900 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 "
           >
             دسته بندی
             <svg
@@ -42,11 +42,11 @@ const HeaderMenu = ()=>{
               />
             </svg>
           </button>
-          <div className="absolute mt-7 p-3 flex-row bg-slate-700 top-8 left-0 right-0 text-white" style={{
+          <div className="absolute mt-7 bg-white border-t border-black p-3 flex-row top-8 left-0 right-0 text-black" style={{
             display: catShow ? "flex":"none",
             lineHeight:2
           }}>
-            <div className="px-4 border-l ml-5 border-lime-300" style={{minWidth:"140px"}}>
+            <div className="px-4 border-l ml-5 border-black-600" style={{minWidth:"140px"}}>
                 {
                     categories.map((cat)=>
                         (  
@@ -72,14 +72,14 @@ const HeaderMenu = ()=>{
         <li>
           <Link
             to="/shop"
-            className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+            className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
           >
             فروشگاه
           </Link>
         </li>
         <li>
           <Link to={"تماس-با-ما"}
-            className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+            className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
           >
             تماس با ما
           </Link>
