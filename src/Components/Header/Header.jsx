@@ -7,7 +7,7 @@ const Header = () => {
       <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
         <Link to={"/"} className="flex items-center">
           <span className="self-center text-2xl font-semibold whitespace-nowrap">
-            جی بوک
+            FOOD&DRINK
           </span>
         </Link>
         <div
