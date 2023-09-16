@@ -13,11 +13,11 @@ const MainBanner = () => {
     formState: { errors },
     handleSubmit,
   } = useForm();
-  const sendReq = async (v) => {
+  const sendReq = async (email) => {
     try {
       const sendReq = await axios.post(
         "http://127.0.0.1:8000/api/requestToJoin",
-        { email: v }
+        { email }
       );
       let data = sendReq.data;
       if (data.status === "success") {
