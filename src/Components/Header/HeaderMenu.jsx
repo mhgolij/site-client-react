@@ -1,4 +1,4 @@
-import {  useState } from "react"
+import {  useRef, useState } from "react"
 import { Link } from "react-router-dom"
 import useAxios from "../../Hooks/useAxios"
 import Loading from "../Main/Loading"
@@ -6,10 +6,19 @@ import Loading from "../Main/Loading"
 const HeaderMenu = ()=>{
     const [catShow,setCatShow] = useState(false)
     const [url,setUrl] = useState("/categories/1")
+    const catMenu = useRef(null)
+    const catButton = useRef(null)
+    const closeOpenMenus = (e)=>{
+      if(catMenu.current && catButton.current && catShow && !catMenu.current.contains(e.target)
+      && !catButton.current.contains(e.target)){
+        setCatShow(false)
+      }
+    }
+    document.addEventListener('mousedown',closeOpenMenus)
     const hideCat = ()=>{
         setCatShow(cat=>!catShow)
     }
-     const getCategory = (id)=>{
+    const getCategory = (id)=>{
        setUrl(`/categories/${id}`)
     }
    const {response:categories}= useAxios({
@@ -21,7 +30,7 @@ const HeaderMenu = ()=>{
     return (
         <ul className="flex gap-3 flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white">
         <li>
-          <button onClick={hideCat}
+          <button ref={catButton} onClick={hideCat}
             id="mega-menu-full-dropdown-button"
             className="flex items-center justify-between w-full py-2 pl-3 pr-4  text-gray-900 rounded md:w-auto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 "
           >
@@ -42,7 +51,7 @@ const HeaderMenu = ()=>{
               />
             </svg>
           </button>
-          <div className="absolute mt-7 bg-white border-t border-black p-3 flex-row top-8 left-0 right-0 text-black" style={{
+          <div ref={catMenu} className="absolute mt-7 bg-white border-t border-black p-3 flex-row top-8 left-0 right-0 text-black" style={{
             display: catShow ? "flex":"none",
             lineHeight:2
           }}>
