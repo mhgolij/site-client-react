@@ -2,7 +2,6 @@ import axios from "axios";
 import useAxios from "../../Hooks/useAxios";
 import Loading from "./Loading";
 import "react-toastify/dist/ReactToastify.css";
-import { useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import { useForm } from "react-hook-form";
 const MainBanner = () => {
