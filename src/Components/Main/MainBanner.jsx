@@ -2,7 +2,7 @@ import axios from "axios";
 import useAxios from "../../Hooks/useAxios";
 import Loading from "./Loading";
 import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
 const MainBanner = () => {
   const { response: sliders, Loading: loader } = useAxios({
@@ -93,7 +93,7 @@ const MainBanner = () => {
           </div>
         ))
       )}
-      <ToastContainer rtl={true} />
+      
     </>
   );
 };

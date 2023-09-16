@@ -7,6 +7,7 @@ import MainPage from "./Components/Main/MainPage";
 import Category from "./Components/Pages/Category";
 import Post from "./Components/Pages/Post";
 import Page from "./Components/Pages/Page";
+import ContactUs from "./Components/Pages/ContactUs";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,6 +18,7 @@ root.render(
          <Route path="/" element={<MainPage />} />
          <Route path="/category/:categoryId" element={<Category />} />
          <Route path="/post/:slug" element={<Post />} />
+         <Route path="/تماس-با-ما" element={<ContactUs />} />
          <Route path="/:page" element={<Page />} />
          </Route>
       </Routes>
